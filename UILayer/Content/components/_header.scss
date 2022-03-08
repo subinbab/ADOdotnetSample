@@ -1,0 +1,43 @@
+﻿header {
+    height: 75px;
+    display: flex;
+
+    .logo {
+        background-color: transparent;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 10px;
+
+        a {
+            font-family: 'Sansita Swashed', cursive;
+            font-size: 30px;
+        }
+    }
+
+    .search {
+        background-color: transparent;
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .search{
+            
+            
+        }
+    }
+
+    nav {
+        background-color: transparent;
+        flex: 2;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .nav-bar {
+            a {
+            }
+        }
+    }
+}
