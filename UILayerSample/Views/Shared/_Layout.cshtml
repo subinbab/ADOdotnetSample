@@ -10,48 +10,52 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-   
-        <header>
-            <div class="logo">
-                <a>MOBIZONE</a>
-            </div>
+
+    <header>
+        <div class="logo">
+            <h1>MOBIZONE</h1>
+        </div>
+        <div class="search">
             <div class="search">
-                <div class="search">
-                    <form>
-                        <input type="text" placeholder="Search Here...!" />
-                        <button type="submit"> <i class="fa fa-search"></i></button>
-                    </form>
-                </div>
+                <form>
+                    <input type="text" placeholder="Search Here...!" />
+                    <button type="submit"> <i class="fa fa-search"></i></button>
+                </form>
             </div>
-            <nav class="nav-bar">
-                <div>
-                    <i class="fa-solid fa-user"></i>
+        </div>
+        <nav class="nav-bar">
+            <div>
+                <i class="fa-solid fa-user"></i>
 
-                    <a>Account</a>
-                </div>
-                <div>
-                    <a>Login</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a>Cart</a>
-                </div>
+                <a>Account</a>
+            </div>
+            <div>
+                <a>Login</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a>Cart</a>
+            </div>
 
 
 
-            </nav>
-        </header>
-
+        </nav>
+    </header>
+    <hr>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
+
+    </div>
+    <hr />
+    <footer>
+        <div class="container body-content">
             <a><h2>MOBIZONE</h2></a>
             <a><p>Contatcs</p></a>
             <a><p>Privacy and Policy</p></a>
             <a><p>About</p></a>
-        </footer>
-    </div>
+        </div>
+        
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

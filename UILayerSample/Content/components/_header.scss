@@ -1,7 +1,9 @@
 ﻿header {
     height: 75px;
     display: flex;
+  
 
+    background-color: transparent;
     .logo {
         background-color: transparent;
         flex: 1;
@@ -22,9 +24,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .search{
-            
-            
+
+        .search {
         }
     }
 

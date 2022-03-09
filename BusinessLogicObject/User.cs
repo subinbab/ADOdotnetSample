@@ -15,15 +15,19 @@ namespace BusinessLogicObject
         [DisplayName("First Name")]
         public string firstName { get; set; }
         [Required]
+        [DisplayName("Last Name")]
         public string lastName { get; set; }
         [Required]
+        [DisplayName("Email")]
         [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail id is not valid")]
         public string email { get; set; }
         [Required]
+        [DisplayName("Password")]
         [RegularExpression(@"^([a-zA-Z0-9@*#]{8,15})$", ErrorMessage = "Password must contain: Minimum 8 characters atleast 1 UpperCase Alphabet, 1 LowerCase      Alphabet, 1 Number and 1 Special Character")]
         [DataType(DataType.Password)]
         public string password { get; set; }
         [Required]
+        [DisplayName("Comnfirm Password")]
         [Compare("Password", ErrorMessage = "Confirm password doesn't match, Type again !")]
         [DataType(DataType.Password)]
         public string confirmPassword { get; set; }

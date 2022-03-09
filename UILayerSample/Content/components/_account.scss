@@ -1,0 +1,18 @@
+﻿
+.body-content {
+    .account {
+        display: flex;
+
+        .menu-bar {
+            flex: 1;
+            background-color: red;
+            height: 400px;
+        }
+
+        .account-body {
+            flex: 3;
+            background-color: yellow;
+            height: 400px;
+        }
+    }
+}
