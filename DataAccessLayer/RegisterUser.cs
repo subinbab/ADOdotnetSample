@@ -11,11 +11,11 @@ namespace DataAccessLayer
 {
     public class RegisterUser
     {
-        SqlConnection _con = null;
-        SqlCommand _cmd = null;
-        SqlDataReader _dr = null;
-        string _connectionString = null;
-        int rowAffected = 0;
+        internal SqlConnection _con = null;
+        internal SqlCommand _cmd = null;
+        internal SqlDataReader _dr = null;
+        internal string _connectionString = null;
+        internal int rowAffected = 0;
         public RegisterUser()
         {
             /*_connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;*/
@@ -27,28 +27,38 @@ namespace DataAccessLayer
         {
             try
             {
-                _cmd = new SqlCommand("CreateUser", _con);
-                _cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                _cmd.Parameters.AddWithValue("@id", data.id);
-                _cmd.Parameters.AddWithValue("@firstName", data.firstName);
-                _cmd.Parameters.AddWithValue("@lastName", data.lastName);
-                _cmd.Parameters.AddWithValue("@email", data.email);
-                _cmd.Parameters.AddWithValue("@password", data.password);
-
-                rowAffected = _cmd.ExecuteNonQuery();
+                register rg = new register();
+                rg.addUser(data);
             }
             catch (Exception ex)
             {
-                
+
             }
             finally
             {
                 _con.Close();
             }
-
-
-
-
+            
+        }
+        public bool Auth(UserLogin data)
+        {
+            try
+            {
+                Authenticate auth = new Authenticate();
+                if (auth.Auth(data))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                _con.Close();
+            }
             
         }
 
