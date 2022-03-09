@@ -28,7 +28,6 @@ namespace BusinessLogicObject
         public string password { get; set; }
         [Required]
         [DisplayName("Comnfirm Password")]
-        [Compare("Password", ErrorMessage = "Confirm password doesn't match, Type again !")]
         [DataType(DataType.Password)]
         public string confirmPassword { get; set; }
 

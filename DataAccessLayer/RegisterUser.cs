@@ -19,7 +19,7 @@ namespace DataAccessLayer
         public RegisterUser()
         {
             /*_connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;*/
-            _connectionString = "Data source = SUYCOKHWDSK129;Initial Catalog = adoSamples; integrated security=true;";
+            _connectionString = "Data source = DESKTOP-OFQARBL\\SQLEXPRESS;Initial Catalog = adoSamples; integrated security=true;";
             _con = new SqlConnection(_connectionString);
             _con.Open();
         }
