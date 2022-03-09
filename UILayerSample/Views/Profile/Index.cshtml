@@ -6,39 +6,41 @@
 <div class="account">
     <div class="menu-bar">
         <div class="account-manage container active" >
-            <a href="#" class="active">
-                <span class="icon"><i class="fas fa-chart-pie"></i></span>
-                <span class="list">Profile</span>
-            </a>
+            <a><h4>Account Settings</h4></a>
         </div>
         <hr />
-        <div class="profile-manage container active" id="accountId1">
-            <a href="#">
-                <span class="icon">
-                    <i class="fas fa-border-all"></i>
-                </span>
-                <span class="list">Address</span>
-            </a>
+        <div class="profile-manage active" id="accountId1" >
+            <a><h5 id="phead" style="color: #ccc8c8;">Profile Settings</h5></a>
         </div>
         <hr />
-        <div class="address-manage container" id="accountId">
-            Address Manage
+        <div class="address-manage " id="accountId">
+            <a><h5 id="ahead">Address Settings</h5></a>
         </div>
         <hr />
     </div>
     <div class="account-body">
-        Name
-        Email
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <link href="~/Content/master.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script>
     $(document).ready(function () {
-        $("#accountId").click(function () {
+        $("#accountId").mouseenter(function () {
 
-            $("#accountId").addClass("active");
-            $("#accountId1").removeClass("active");
+            $("#phead").css("color","black")
+            $("#ahead").css("color","#ccc8c8")
+        })
+        $("#accountId1").mouseenter(function () {
+
+            $("#phead").css("color", "#ccc8c8")
+            $("#ahead").css("color", "black")
         })
     })
 </script>

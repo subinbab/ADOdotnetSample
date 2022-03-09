@@ -41,11 +41,11 @@ header nav {
 }
 .body-content .account .menu-bar {
   flex: 1;
-  background-color: red;
+  background-color: transparent;
   height: 400px;
 }
 .body-content .account .account-body {
   flex: 3;
-  background-color: yellow;
+  background-color: transparent;
   height: 400px;
 }
