@@ -18,8 +18,8 @@ namespace DataAccessLayer
         internal int rowAffected = 0;
         public RegisterUser()
         {
-            /*_connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;*/
-            _connectionString = "Data source = DESKTOP-OFQARBL\\SQLEXPRESS;Initial Catalog = adoSamples; integrated security=true;";
+            _connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            
             _con = new SqlConnection(_connectionString);
             _con.Open();
         }

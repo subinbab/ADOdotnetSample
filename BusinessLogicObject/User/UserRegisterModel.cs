@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicObject
 {
-    public class User
+    public class UserRegisterModel
     {
         public int id { get; set; }
         [Required]

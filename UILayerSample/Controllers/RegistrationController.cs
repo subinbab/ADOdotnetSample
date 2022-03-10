@@ -1,5 +1,6 @@
 ﻿using BusinessLogicObject;
 using DataAccessLayer;
+using DataAccessLayer.user;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,12 @@ using System.Web.Mvc;
 
 namespace UILayerSample.Controllers
 {
+    
     public class RegistrationController : Controller
     {
+        IUserRepository _userRepository;
         // GET: Registration
+        
         [HttpGet]
         public ActionResult Index()
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicObject
 {
-    public class UserLogin
+    public class UserLoginModel
     {
         [Required,EmailAddress]
         [Display(Name ="Enter your user name")]

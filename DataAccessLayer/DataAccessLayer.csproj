@@ -61,9 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authenticate.cs" />
+    <Compile Include="DataFactory\DataAccessFactory.cs" />
     <Compile Include="register.cs" />
     <Compile Include="RegisterUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user\IUserRepository.cs" />
+    <Compile Include="user\Operations\RegisterUser.cs" />
+    <Compile Include="user\UserBaseModel.cs" />
+    <Compile Include="user\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
