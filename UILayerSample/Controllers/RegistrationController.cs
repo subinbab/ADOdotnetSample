@@ -13,6 +13,10 @@ namespace UILayerSample.Controllers
     public class RegistrationController : Controller
     {
         IUserRepository _userRepository;
+        public RegistrationController()
+        {
+            _userRepository = new UserRepository();
+        }
         // GET: Registration
         
         [HttpGet]
@@ -21,19 +25,27 @@ namespace UILayerSample.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(User user)
+        public JsonResult Index([Bind]UserRegisterModel user)
         {
-            RegisterUser ru = new RegisterUser();
-            user.id = 0;
-            if (ModelState.IsValid)
+            try
             {
-                ru.Add(user);
-                return View();
+                user.id = 0;
+                if (ModelState.IsValid)
+                {     
+                    string message = _userRepository.RegisterUser(user);
+                    
+                    return Json(new { data = message, success = true }, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json(new { data = "error",success=true}, JsonRequestBehavior.AllowGet); 
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return Content("unsuccesfull");
+                return Json(new { data = "error", success = true }, JsonRequestBehavior.AllowGet);
             }
+            
             
 
         }

@@ -10,7 +10,7 @@ namespace DataAccessLayer.user
 {
     public interface IUserRepository
     {
-        int RegisterUser(UserRegisterModel userRegisterModel);
+        string RegisterUser(UserRegisterModel userRegisterModel);
         UserAccountModel LoginUser(UserLoginModel userLoginModel);
     }
 }

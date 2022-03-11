@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLogicObject;
 
-namespace DataAccessLayer
+/*namespace DataAccessLayer
 {
     internal class Authenticate
     {
@@ -26,11 +26,11 @@ namespace DataAccessLayer
                 reg._cmd.Parameters.AddWithValue("@userName", data.userName);
                 reg._cmd.Parameters.AddWithValue("@password", data.password);
 
-                /*SqlParameter outputparam = new SqlParameter();
+                *//*SqlParameter outputparam = new SqlParameter();
                 outputparam.ParameterName = "@check";
                 outputparam.Direction = System.Data.ParameterDirection.Output;
                 outputparam.SqlDbType = System.Data.SqlDbType.Int;
-                reg._cmd.Parameters.Add(outputparam);*/
+                reg._cmd.Parameters.Add(outputparam);*//*
 
 
                 reg._cmd.Parameters.Add("@firstName", SqlDbType.VarChar, 150);
@@ -44,7 +44,7 @@ namespace DataAccessLayer
 
                 reg.rowAffected = reg._cmd.ExecuteNonQuery();
                 int check = Convert.ToInt32(reg._cmd.Parameters["@check"].Value);
-                /*int check = Convert.ToInt32(outputparam.Value);*/
+                *//*int check = Convert.ToInt32(outputparam.Value);*//*
 
 
                 if (check==1)
@@ -60,3 +60,4 @@ namespace DataAccessLayer
         }
     }
 }
+*/

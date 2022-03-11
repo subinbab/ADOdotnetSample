@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using System.Configuration;
 using BusinessLogicObject;
 
-namespace DataAccessLayer
+/*namespace DataAccessLayer
 {
-    public class RegisterUser
+  */  /*public class RegisterUser
     {
         internal SqlConnection _con = null;
         internal SqlCommand _cmd = null;
@@ -64,4 +64,4 @@ namespace DataAccessLayer
 
         
     }
-}
+}*/

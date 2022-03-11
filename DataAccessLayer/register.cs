@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLogicObject;
 
-namespace DataAccessLayer
+/*namespace DataAccessLayer
 {
     internal class register
     {
@@ -36,3 +36,4 @@ namespace DataAccessLayer
         }
     }
 }
+*/
